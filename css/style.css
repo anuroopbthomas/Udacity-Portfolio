@@ -1,0 +1,151 @@
+html, body {
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  background: #eee;
+  font: 13px/1.6 "Helvetica Neue", helvetica, Lato, arial, sans-serif;
+  color: #666;
+  margin: 0px;
+  overflow-y: scroll;
+  line-height: 21px;
+}
+img {
+  max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+
+/* Start styling for header area*/
+header {
+    padding-top: 10px;
+}
+header .container{
+  display: flex;
+  position: relative;
+  max-width: 980px;
+}
+header .line {
+  width: 100%;
+    border-bottom: solid 4px #7d97ad;
+}
+header .left {
+  width: 40%;
+  float:left;
+}
+header .right {
+  width: 90%;
+  text-align: right;
+  float: right;
+}
+header .right .name{
+  font-weight: normal;
+  padding-bottom:5px;
+  text-transform: uppercase;
+}
+header .right .undername{
+  font-weight: normal;
+  font-size:15px;
+  line-height: 21px;
+}
+header .profilepic {
+  background: url("../img/profilepicture.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border-radius: 50%;
+  display: inline-block;
+  width:80px;
+  height:80px;
+}
+
+/* H2 and container styling*/
+h2.projecthead {
+  text-transform: uppercase;
+  margin: 1.75rem 0;
+  border-bottom: solid 1px #aaa;
+  line-height: 0px;
+  font-weight: normal;
+  color:#627788;
+}
+h2.projecthead span{
+  background: #eee;
+  padding-right:10px;
+}
+.container {
+  max-width:980px;
+  margin: 0 auto;
+  padding:10px 20px;
+}
+
+/* Start stylying for portfolio projects*/
+#projects {
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+}
+#projects .portfolio-item {
+  background: #fff;
+  width: 32%;
+  margin-bottom:2%;
+  text-align: left;
+  box-shadow: 0 2px 0 #D9E1E7;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  border-radius: 3px;
+}
+#projects .portfolio-item img{
+  border-radius: 3px 3px 0 0;
+}
+#projects .portfolio-item .text_block{
+  padding: 1.25rem;
+}
+#projects .portfolio-item h3 {
+  font-size:18px;
+  color:#444;
+  text-transform: uppercase
+}
+#projects .portfolio-item:nth-child(3n-1) {
+  margin-right:2%;
+  margin-left:2%;
+}
+
+/*Footer styling*/
+footer {
+  max-width:980px;
+  margin:0 auto;
+  padding:10px 20px;
+}
+
+/*Media Queries*/
+/*For devices with width between 600px and 850px*/
+@media screen and (min-width: 600px) and (max-width: 850px)  {
+  #projects .portfolio-item{
+    width:49%;
+  }
+  #projects .portfolio-item:nth-child(odd) {
+    margin-right:2%;
+    margin-left:0px;
+  }
+  #projects .portfolio-item:nth-child(even) {
+    margin-right:0px;
+    margin-left:0px;
+  }
+}
+/*For devices with width up to 600px*/
+@media screen and (max-width: 600px)  {
+  #projects .portfolio-item{
+    width:99%;
+    margin-right:0!important;
+    margin-left:0!important;
+    margin-bottom:20px;
+  }
+}
